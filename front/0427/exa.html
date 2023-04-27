@@ -1,0 +1,72 @@
+/* 직각 삼각형 */
+let height = 10;
+
+for ( let i = 0; i < height; i++ ) {
+    let row = '';
+    for ( let j = 0; j <= i; j++ ) {
+        row +='*'
+    }
+    console.log(row);
+}
+
+/* 사각형 */
+let height = 10;
+let width = 10;
+for ( let i = 0; i < height; i++ ) {
+    let row = '';
+    for ( let j = 0; j < width; j++ ) {
+        row +='*'
+    }
+    console.log(row);
+}
+
+/* 역직각삼각 j는 height와 같다(10이라는 뜻). i 9까지 출력 */
+let height = 10;
+for ( let i=0; i < height; i++) {
+    let row = '';
+    for (let j = height; j > i; j-- ) {
+        row +="*";
+    }
+    console.log(row);
+}
+
+/* 피라미드 - 13579 늘어남 */
+let height = 10;
+
+for (let i=0; i < height; i++) { /* height 크기 만큼 루프 */
+    let row = ''; 
+    for (let j=1; j < height-i; j++ ) {
+        row +=' '; /* 10줄 기준 1행=9... 이렇게 공백 1개씩 줄인다 */
+    }
+    for (let j=0; j < i*2+1; j++) { /* 별이 1,3,5,7,9 로 2개씩 홀수개로 증가 */
+        row +='*';
+    }
+   
+    console.log(row); /* 역피라미드는 반대로! */
+}
+
+/* 다이아몬드 = 피라미드 + 역피라미드 */
+let height = 10;
+for (let i=0; i < height; i++) {
+    let row += ''; 
+    for (let j=1; j < height-i; j++ ) {
+    row =' ';
+}
+for (let j=0; j < i*2+1; j++) {
+    row +='*';
+}
+console.log(row);
+}
+
+
+for ( let i=height-1; i > 0; i--) {
+    let row = '';
+    for (let j=height-i; j>0; j--) {
+        row += ' '; 
+    }
+        for ( let j=i*2-1; j>0; j-- ) {
+            row +='*';
+        }
+    console.log(row);
+}
+
